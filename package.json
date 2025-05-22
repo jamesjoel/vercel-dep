@@ -1,9 +1,10 @@
 {
   "name": "vercel-dep",
+  "type" : "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start" : "node app",
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   }
 }

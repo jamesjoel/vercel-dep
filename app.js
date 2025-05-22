@@ -1,8 +1,16 @@
-const express = require("express");
+import express from 'express';
+import cors from 'cors'
+import path from 'path';
 const app = express();
+app.use(express.json())
+app.use(express.urlencoded({ extended : true }));
+app.use(cors());
 
-app.get("/", (req, res)=>{
-    res.send("Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam delectus odit beatae fuga obcaecati, nostrum distinctio mollitia enim, accusamus unde ullam odio perferendis temporibus velit maxime iste nemo sapiente consectetur!")
+const root = path.join(path.resolve(), "dist");
+app.use(express.static(root));
+
+app.get(/(.*)/, (req, res)=>{
+    res.sendFile("index.html", {root});
 })
 
 const port = process.env.PORT || 3000;
