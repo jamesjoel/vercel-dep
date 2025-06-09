@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 mongoose
-.connect(process.env.DB_URL)
+.connect("mongodb+srv://contactshinypearls:0R3Jb4AJZCCyshqL@cluster0.fsztvcl.mongodb.net/")
 .then(()=>{
     console.log("DATABASE CONNECTED")
 })
