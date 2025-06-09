@@ -7,7 +7,13 @@ let addCate = async(req, res)=>{
 }
 
 let getAllCate = async(req, res)=>{
-    let result = await Cate.find();
+    // let result = await Cate.find();
+    let result = [
+        {
+            _id : 123,
+            title : "Nackless"
+        }
+    ]
     res.send(result);
 }
 let getCateById = async(req, res)=>{
