@@ -29,4 +29,9 @@ let deleteCate = async(req, res)=>{
     res.send(result);
 }
 
-export {addCate, getAllCate, getCateById, updateCate, deleteCate};
+let deteteAllCate = async(req, res)=>{
+    let result = await Cate.deleteMany({});
+    res.send(result);
+}
+
+export {addCate, getAllCate, getCateById, updateCate, deleteCate, deteteAllCate};

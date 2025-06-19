@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon --env-file=.env.dev app.js",
-    "prod" : "node --env-file=.env.prod app.js",
+    "dev": "nodemon --env-file=.env.dev app.js",
+    "prod": "node --env-file=.env.prod app.js",
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-fileupload": "^1.5.1",
-    "mongoose": "^8.15.0"
+    "mongoose": "^8.15.0",
+    "uuid": "^11.1.0"
   }
 }
