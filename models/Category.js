@@ -1,4 +1,4 @@
-import mongoose from "../db/Conn.js";
+import mongoose, {dbConnect} from "../db/Conn.js";
 
 const CateSchema = mongoose.Schema({
     title : String,
