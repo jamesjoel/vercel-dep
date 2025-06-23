@@ -6,7 +6,8 @@ import {v4 as uuidv4} from 'uuid'
 let addPro = async(req, res)=>{
     let file = req.files.image;
     let formdata = req.body;
-    let ext = path.extname(file.name);
+    let arr = file.name.split(".");
+    let ext = arr[arr.length-1];
     let uniquename = uuidv4()+ext;
     
     file.mv(path.resolve()+"/assets/products/"+uniquename, async(err)=>{
